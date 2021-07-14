@@ -1,0 +1,28 @@
+{% extends "bank/base.html" %}
+
+{% block content %}
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col"><i class="fa fa-user">&nbsp;<b style="font-family: 'Noto serif JP', serif; font-weight: 800;">Sender's Name</b></i></th>
+        <th scope="col"><i class="fa fa-user">&nbsp;<b style="font-family: 'Noto serif JP', serif; font-weight: 800;">A/C No.</b></i></th>
+        <th scope="col"><i class="fa fa-dollar">&nbsp;<b style="font-family: 'Noto serif JP', serif; font-weight: 800;">Current Balance</b></i></th>
+        <th scope="col"><i class="fa fa-user">&nbsp;<b style="font-family: 'Noto serif JP', serif; font-weight: 800;">Reciever's Name</b></i></th>
+        <th scope="col"><i class="fa fa-money">&nbsp;<b style="font-family: 'Noto serif JP', serif; font-weight: 800;">Money Transferred</b></i></th>
+        <th scope="col"><i class="fa fa-calendar">&nbsp;<b style="font-family: 'Noto serif JP', serif; font-weight: 800;">Date/Time</b></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for details in history %}
+      <tr>
+        <td scope="row" style="font-family: 'Noto serif JP', serif; font-weight: 600;">{{details.sender_name}}</td>
+        <td style="font-family: 'Noto serif JP', serif; font-weight: 600;">{{details.sender_accno}}</td>
+        <td style="font-family: 'Noto serif JP', serif; font-weight: 600;">{{details.current_balance}}</td>
+        <td style="font-family: 'Noto serif JP', serif; font-weight: 600;">{{details.reciever_name}}</td>
+        <td style="font-family: 'Noto serif JP', serif; font-weight: 600;">{{details.money_transfer}}</td>
+        <td style="font-family: 'Noto serif JP', serif; font-weight: 600;" >{{details.date}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endblock content %}
