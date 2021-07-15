@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'ewgbqndgw0)=m_-)p0_+(9zi&88ivse!r9-w2gwz12xy&+z%ma'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['thesimplebank.herokuapp.com', 'localhost:8000']
 
